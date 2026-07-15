@@ -6,16 +6,16 @@ A collection of ready-to-run Dockerfile examples covering 8 popular technology s
 
 ## Repository Structure
 
-| # | Folder | Stack | Port |
-|---|--------|-------|------|
-| 01 | `01-python-flask-app` | Python 3.12 + Flask 3 | 5000 |
-| 02 | `02-nodejs-express-app` | Node.js 22 + Express 4 | 3000 |
-| 03 | `03-python-fastapi-app` | Python 3.12 + FastAPI | 8000 |
-| 04 | `04-go-http-server` | Go 1.23 (multi-stage) | 8080 |
-| 05 | `05-nginx-static-site` | Nginx 1.27 | 80 |
-| 06 | `06-java-spring-boot-app` | Java 21 + Spring Boot 3.3 (multi-stage) | 8080 |
-| 07 | `07-ruby-on-rails-app` | Ruby 3.3 + Rails 7.2 (API) | 3000 |
-| 08 | `08-dotnet-aspnet-app` | .NET 8 ASP.NET Core (multi-stage) | 8080 |
+| #   | Folder                    | Stack                                   | Port |
+| --- | ------------------------- | --------------------------------------- | ---- |
+| 01  | `01-python-flask-app`     | Python 3.12 + Flask 3                   | 5000 |
+| 02  | `02-nodejs-express-app`   | Node.js 22 + Express 4                  | 3000 |
+| 03  | `03-python-fastapi-app`   | Python 3.12 + FastAPI                   | 8000 |
+| 04  | `04-go-http-server`       | Go 1.23 (multi-stage)                   | 8080 |
+| 05  | `05-nginx-static-site`    | Nginx 1.27                              | 80   |
+| 06  | `06-java-spring-boot-app` | Java 21 + Spring Boot 3.4 (multi-stage) | 8080 |
+| 07  | `07-ruby-on-rails-app`    | Ruby 3.4 + Rails 8.0 (API)              | 3000 |
+| 08  | `08-dotnet-aspnet-app`    | .NET 9 ASP.NET Core (multi-stage)       | 8080 |
 
 ---
 
@@ -263,14 +263,14 @@ docker rm   flask-app express-app fastapi-app go-server nginx-site spring-app ra
 - Instance type: `t3.micro` or larger
 - Security Group — add inbound rules:
 
-| Type | Protocol | Port |
-|------|----------|------|
-| SSH | TCP | 22 |
-| HTTP | TCP | 80 |
-| Custom | TCP | 3000 |
-| Custom | TCP | 5000 |
-| Custom | TCP | 8000 |
-| Custom | TCP | 8080 |
+| Type   | Protocol | Port |
+| ------ | -------- | ---- |
+| SSH    | TCP      | 22   |
+| HTTP   | TCP      | 80   |
+| Custom | TCP      | 3000 |
+| Custom | TCP      | 5000 |
+| Custom | TCP      | 8000 |
+| Custom | TCP      | 8080 |
 
 ### 2. Connect via SSH
 ```bash
