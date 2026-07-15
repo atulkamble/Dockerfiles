@@ -1,12 +1,12 @@
 # =============================================================
 # Java Spring Boot Application — Multi-Stage Build
-# Base: maven:3.9-eclipse-temurin-21 (Spring Boot 3.4.x, Java 21)
+# Base: maven:3.9-eclipse-temurin-25 (Spring Boot 3.4.x, Java 25)
 # Stage 1 (builder): compiles and packages the JAR with Maven
 # Stage 2 (runtime): runs the JAR on a minimal JRE image
 # =============================================================
 
 # ── Stage 1: Build ──
-FROM maven:3.9-eclipse-temurin-21 AS builder
+FROM maven:3.9-eclipse-temurin-25 AS builder
 
 WORKDIR /app
 
@@ -20,7 +20,7 @@ RUN mvn package -DskipTests -B
 
 # ── Stage 2: Runtime ──
 # eclipse-temurin:21-jre-alpine — JRE-only image, much smaller than full JDK
-FROM eclipse-temurin:21-jre-alpine
+FROM eclipse-temurin:25-jre-alpine
 
 WORKDIR /app
 
