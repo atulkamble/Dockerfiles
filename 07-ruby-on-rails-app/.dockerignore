@@ -1,0 +1,11 @@
+# Ignore bundler install cache
+.bundle/
+vendor/bundle/
+
+# Ignore logs and tmp files
+log/
+tmp/
+
+# Ignore environment files
+.env
+.env.*

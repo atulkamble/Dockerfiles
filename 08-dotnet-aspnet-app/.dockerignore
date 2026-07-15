@@ -1,0 +1,8 @@
+# Ignore .NET build output (rebuilt inside the container)
+bin/
+obj/
+
+# Ignore user-specific files
+*.user
+*.suo
+.vs/

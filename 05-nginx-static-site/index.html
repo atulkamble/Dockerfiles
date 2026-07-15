@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nginx Static Site on Docker</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f0f4f8;
+    }
+    .card {
+      text-align: center;
+      padding: 48px 56px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+    h1 { color: #1a202c; font-size: 2rem; margin-bottom: 12px; }
+    p  { color: #718096; font-size: 1rem; }
+    .badge {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 4px 12px;
+      background: #ebf8ff;
+      color: #2b6cb0;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Hello, Nginx on Docker!</h1>
+    <p>This static site is served by Nginx inside a Docker container.</p>
+    <span class="badge">nginx:1.27-alpine</span>
+  </div>
+</body>
+</html>

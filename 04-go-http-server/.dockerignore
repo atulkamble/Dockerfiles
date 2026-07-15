@@ -1,0 +1,5 @@
+# Ignore compiled binary
+server
+
+# Ignore test cache
+*.test
