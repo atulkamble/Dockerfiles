@@ -1,6 +1,6 @@
 # =============================================================
 # Java Spring Boot Application — Multi-Stage Build
-# Base: maven:3.9-eclipse-temurin-25 (Spring Boot 3.4.x, Java 25)
+# Base: maven:3.9-eclipse-temurin-25 (Spring Boot 3.5.x, Java 25)
 # Stage 1 (builder): compiles and packages the JAR with Maven
 # Stage 2 (runtime): runs the JAR on a minimal JRE image
 # =============================================================
