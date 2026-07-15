@@ -1,11 +1,12 @@
 # =============================================================
 # .NET ASP.NET Core Application — Multi-Stage Build
+# Base: mcr.microsoft.com/dotnet/sdk:9.0 (.NET 9, current release)
 # Stage 1 (builder): restores packages and publishes the app
 # Stage 2 (runtime): runs on a minimal ASP.NET Core runtime image
 # =============================================================
 
 # ── Stage 1: Build ──
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS builder
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS builder
 
 WORKDIR /app
 
@@ -18,8 +19,8 @@ COPY . .
 RUN dotnet publish -c Release -o /app/publish --no-restore
 
 # ── Stage 2: Runtime ──
-# aspnet:8.0 — only the ASP.NET Core runtime, no SDK overhead
-FROM mcr.microsoft.com/dotnet/aspnet:8.0
+# aspnet:9.0 — only the ASP.NET Core runtime, no SDK overhead
+FROM mcr.microsoft.com/dotnet/aspnet:9.0
 
 WORKDIR /app
 

@@ -9,3 +9,17 @@ tmp/
 # Ignore environment files
 .env
 .env.*
+
+# Ignore test directories
+spec/
+test/
+
+# Ignore IDE project files
+.idea/
+
+# Ignore Git metadata
+.git/
+.gitignore
+
+# Ignore documentation
+*.md

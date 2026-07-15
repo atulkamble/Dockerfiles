@@ -1,15 +1,15 @@
 # =============================================================
 # Ruby on Rails Application (API mode)
-# Base image: ruby:3.3-slim (latest stable, minimal footprint)
+# Base image: ruby:3.4-slim (latest stable, minimal footprint)
 # =============================================================
-FROM ruby:3.3-slim
+FROM ruby:3.4-slim
 
 # ── Step 1: Install system dependencies required by native gems ──
 RUN apt-get update -qq && \
-    apt-get install -y --no-install-recommends \
-      build-essential \
-      libsqlite3-dev && \
-    rm -rf /var/lib/apt/lists/*
+  apt-get install -y --no-install-recommends \
+  build-essential \
+  libsqlite3-dev && \
+  rm -rf /var/lib/apt/lists/*
 
 # ── Step 2: Set the working directory inside the container ──
 WORKDIR /app

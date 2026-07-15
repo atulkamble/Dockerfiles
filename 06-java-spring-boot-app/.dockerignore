@@ -1,5 +1,16 @@
 # Ignore Maven build output (rebuilt inside the container)
 target/
 
-# Ignore local settings
+# Ignore local Maven wrapper settings
 .mvn/
+
+# Ignore IDE project files
+.idea/
+*.iml
+
+# Ignore Git metadata
+.git/
+.gitignore
+
+# Ignore documentation
+*.md
