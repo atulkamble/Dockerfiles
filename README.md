@@ -65,8 +65,8 @@ docker run hello-world
 ## Clone the Repository
 
 ```bash
-git clone https://github.com/atulkamble/Dockerfile-Examples.git
-cd Dockerfile-Examples
+git clone https://github.com/atulkamble/Dockerfiles.git
+cd Dockerfiles
 ```
 
 ---
