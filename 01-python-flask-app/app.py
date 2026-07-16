@@ -3,7 +3,7 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     """Root endpoint — returns a greeting."""
-    return "Hello, Flask App!"
+    return "Hello, from Flask App!"
 @app.route("/health")
 def health():
     """Health-check endpoint for container orchestrators."""
