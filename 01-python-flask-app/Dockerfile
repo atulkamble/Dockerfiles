@@ -1,24 +1,6 @@
-# =============================================================
-# Stage 1 — Python Flask Application
-# Base image: python:3.12-slim (latest stable, minimal footprint)
-# =============================================================
 FROM python:3.12-slim
-
-# ── Step 1: Set the working directory inside the container ──
 WORKDIR /app
-
-# ── Step 2: Copy only requirements first (layer-cache friendly) ──
-COPY requirements.txt .
-
-# ── Step 3: Install Python dependencies without cache to keep image small ──
-RUN pip install --no-cache-dir -r requirements.txt
-
-# ── Step 4: Copy the rest of the application source code ──
 COPY . .
-
-# ── Step 5: Expose the port Flask listens on ──
+RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
-
-# ── Step 6: Run the Flask development server ──
-#    host=0.0.0.0 makes the server reachable from outside the container
 CMD ["python", "app.py"]
